@@ -1,5 +1,6 @@
 *.zip
 *.csv
 *.jpg
+.idea/*
 *.json
 MNIST_data/*
