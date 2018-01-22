@@ -37,9 +37,9 @@ class AdditiveGaussianNoiseAutoEncoder:
 
     def _initialize_weights(self):
         all_weights = {}
-        all_weights['w1'] = tf.Variable(xavier_init(self.n_input, self.hidden))
-        all_weights['b1'] = tf.Variable(tf.zeros([self.hidden], dtype=tf.float32))
-        all_weights['w2'] = tf.Variable(tf.zeros([self.hidden, self.n_input], dtype=tf.float32))
+        all_weights['w1'] = tf.Variable(xavier_init(self.n_input, self.n_hidden))
+        all_weights['b1'] = tf.Variable(tf.zeros([self.n_hidden], dtype=tf.float32))
+        all_weights['w2'] = tf.Variable(tf.zeros([self.n_hidden, self.n_input], dtype=tf.float32))
         all_weights['b2'] = tf.Variable(tf.zeros([self.n_input], dtype=tf.float32))
 
         return all_weights
